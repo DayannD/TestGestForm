@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Calcul {
+public class Calcul implements ICalcul{
     private ArrayList nbRamdon = new ArrayList<>();
 
-    public Calcul(Integer nbMin,Integer nbMax,int randomNb){
+    public Calcul(Integer nbMin,Integer nbMax,int randomNb){// a l'instanciation on fait appelle au constructeur qui va initialiser
+                                                            // notre List avec n numéro aléatoire entre les données fournie
         Random r = new Random();
         for (int i = 0; i < randomNb; i++){
             nbRamdon.add(r.nextInt(nbMax-nbMin) + nbMin);
@@ -27,4 +28,5 @@ public class Calcul {
             }
         }
     }
+
 }
